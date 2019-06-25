@@ -20,11 +20,11 @@ var user = {
 }
 
 app.post('/addUser', function (req, res){
-	fs.readFile(__dirname + "/" + "user.json", 'utf8', function (err, data1){
-		data1 = JSON.parse(data1);
-		data1["user4"] = user["user4"];
-		console.log(data1);
-		res.end(JSON.stringify(data1));
+	fs.readFile(__dirname + "/" + "users.json", 'utf8', function (err, data){
+		data = JSON.parse(data);
+		data["user4"] = user["user4"];
+		console.log(data);
+		res.end(JSON.stringify(data));
 	});
 })
 
